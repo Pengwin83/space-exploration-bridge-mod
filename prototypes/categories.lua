@@ -3,7 +3,7 @@
 data:extend({
   {
     type = "recipe-category",
-	name = "asteroid-dust-mining"
+    name = "asteroid-dust-mining"
   },
   {
     type = "resource-category",
