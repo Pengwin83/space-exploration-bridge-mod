@@ -1,5 +1,9 @@
 # GIT
 .git/
 
+# GIT IGNORE
+.gitignore
+
 # Project file
 .project
+
