@@ -2,7 +2,15 @@
 Version: 0.2.3
 Date: 2020.02.24
   Changes:
+    - Update to 0.18
     - Added thumbnail
+    - Might now work with the latest version. Tested with Factorio 18.8 and the
+      mentioneddependency versions. Will be updated as soon as issues in
+      dependencies are fixed.
+
+  Known issues:
+    - The latest version of Space Exploration changed the core miner drill. It
+      was reported to crash the game.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.2
