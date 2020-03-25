@@ -27,9 +27,11 @@ function create_asteroid_miner(event)
 
 	end
 	if not entity then
+		local first_player = game.get_player(event.player_index)
 		return
 	end
 	if entity.name == AMD.name_amd_placeholder or ghost == 1 then
+		local first_player = game.get_player(event.player_index)
 		if entity.surface and entity.surface.get_tile(entity.position.x, entity.position.y) then
 			local tile = entity.surface.get_tile(entity.position.x, entity.position.y)
 			
@@ -47,7 +49,8 @@ function create_asteroid_miner(event)
 					-- place real miner drill
 					local mining_drill = entity.surface.create_entity{
 						name = AMD.name_amd,
-						position = entity.position,
+						--position = entity.position,
+						position = {x = entity.position.x, y = entity.position.y + 1/32},
 						direction = entity.direction,
 						force = entity.force
 					}
@@ -56,7 +59,7 @@ function create_asteroid_miner(event)
 					cancel_entity_creation(entity, event.player_index, AMD.flying_text_placement)
 					return
 				end
-			else 
+			else
 				--identified as entity ghost
 				if (tile.name == AMD.se_asteroid) then
 					return
@@ -153,4 +156,3 @@ function cancel_entity_creation(entity, player_index, message)
 	}
 	entity.destroy()
 end
-
