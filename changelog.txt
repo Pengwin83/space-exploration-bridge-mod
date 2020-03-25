@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.4
+Date: 2020.03.26
+  Changes:
+    - Quick fix for the Asteroid Miner
+
+  Known issues:
+    - The entity cannot be rotated at the moment, but at least the mod wont crash.
+      Dust can be mined. I will try to fix this as soon as possible.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.3
 Date: 2020.02.24
   Changes:
