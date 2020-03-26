@@ -156,3 +156,16 @@ function cancel_entity_creation(entity, player_index, message)
 	}
 	entity.destroy()
 end
+
+-- simple entity does not support rotation, bake into graphics variation
+function on_player_rotated_entity(event)
+  if event.entity and event.entity.valid then
+    local surface = event.entity.surface
+    if event.entity.name == AMD.name_amd then
+      local e = event.entity.surface.find_entity(AMD.name_amd_placeholder, event.entity.position)
+      --if e then e.graphics_variation = Coreminer.direction_to_variation(event.entity.direction) end
+      if e then e.direction = event.entity.direction end
+    end
+  end
+end
+script.on_event(defines.events.on_player_rotated_entity, on_player_rotated_entity)

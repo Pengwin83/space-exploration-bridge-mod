@@ -8,5 +8,9 @@ data:extend({
   {
     type = "resource-category",
     name = "asteroid-mining",
+  },
+  {
+    type = "recipe-category",
+    name = "empty",
   }
 })
