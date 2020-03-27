@@ -27,11 +27,9 @@ function create_asteroid_miner(event)
 
 	end
 	if not entity then
-		local first_player = game.get_player(event.player_index)
 		return
 	end
 	if entity.name == AMD.name_amd_placeholder or ghost == 1 then
-		local first_player = game.get_player(event.player_index)
 		if entity.surface and entity.surface.get_tile(entity.position.x, entity.position.y) then
 			local tile = entity.surface.get_tile(entity.position.x, entity.position.y)
 			
